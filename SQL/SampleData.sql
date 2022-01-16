@@ -3,7 +3,7 @@
 insert into company_owner (owner_name,owner_pwd,email) values ('Srinivasan', md5('Srini@234'),'srinipallock@abc.com');
 insert into company_owner (owner_name,owner_pwd,email) values ('Wu', md5('Wangle@2943'),'wangler29@gmail.com');
 insert into company_owner (owner_name,owner_pwd,email) values ('Mozart', md5('Mozo@980'),'mozilla20@xyz.com');
-insert into company_owner (owner_name,owner_pwd,email) values ('Einstein', md5('Stein$209'),'teinpol@dec.com');
+insert into company_owner (owner_name,owner_pwd,email) values ('Einstein', md5('Stein$209'),'teinpol@dec.com'); 
 insert into company_owner (owner_name,owner_pwd,email) values ('Gold', md5('Goldiee%20'),'kdnnkjn@nxjn.com');
 
 
