@@ -1,0 +1,38 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/polyfill": "^7.12.1",
+    "@mui/material": "^5.0.1",
+    "aws-sdk": "^2.1017.0",
+    "babel": "^6.23.0",
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.0",
+    "chai-http": "^4.3.0",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-bunyan-logger": "^1.3.3",
+    "express-session": "^1.17.2",
+    "express-winston": "^4.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "mysql": "^2.18.1",
+    "node": "^16.9.1",
+    "nodemon": "^2.0.13",
+    "react-bootstrap": "^1.6.4",
+    "react-use-cart": "^1.13.0",
+    "sync-sql": "^1.0.2",
+    "validator": "^13.6.0",
+    "winston": "^3.3.3"
+  }
+}

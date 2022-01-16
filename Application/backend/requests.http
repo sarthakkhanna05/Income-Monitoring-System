@@ -1,0 +1,280 @@
+// SignUp Owner
+POST http://localhost:5000/api/auth/SignUp HTTP/1.1
+content-type: application/json
+
+{
+      "name": "Yash Vardhan",
+      "contact_no": "",
+      "gender": "",
+      "email": "Yash@gmail.com",
+      "address": "",
+      "password": "s",
+      "persona": 0
+}
+
+###
+// SignUp employee
+POST http://localhost:5000/api/auth/SignUp HTTP/1.1
+content-type: application/json
+
+{
+      "name": "Rohit Sikrewal",
+      "contact_no": "4085496361",
+      "gender": "Male",
+      "email": "sikrewal1@gmail.com",
+      "address": "190 Ryland Street",
+      "password": "sikrewal1@gmail.com",
+      "persona": 1
+}
+
+###
+// SignUp Customer
+POST http://localhost:5000/api/auth/SignUp HTTP/1.1
+content-type: application/json
+
+{
+      "name": "Rohit Sikrewal",
+      "contact_no": "4085496361",
+      "gender": "Male",
+      "email": "sa@gmail.com",
+      "address": "190 Ryland Street",
+      "password": "xyz",
+      "persona": 2
+}
+
+###
+// SignIp Owner
+POST http://localhost:5000/api/auth/SignIn HTTP/1.1
+content-type: application/json
+
+{
+      "email": "Yash@gmail.com",
+      "password": "s",
+      "persona": 0
+}
+###
+// SignIp employee
+POST http://localhost:5000/api/auth/SignIn HTTP/1.1
+content-type: application/json
+
+{
+      "email": "sikrewavgsahgshgho123@gmail.com",
+      "password": "z",
+      "persona": 1
+}
+
+###
+// SignIp customer
+POST http://localhost:5000/api/auth/SignIn HTTP/1.1
+content-type: application/json
+
+{
+      "email": "sart@gmail.com",
+      "password": "yz",
+      "persona": 2
+}
+
+###
+// get employee info
+Get http://localhost:5000/api/employee/getEmpInfo?id=2 HTTP/1.1
+content-type: application/json
+
+###
+// get employee messge
+Get http://localhost:5000/api/employee/getEmployeeMessage?id=1 HTTP/1.1
+content-type: application/json
+
+
+###
+// update employee info
+put http://localhost:5000/api/employee/updateEmpInfo HTTP/1.1
+content-type: application/json
+
+{
+      "id": 1,
+      "name": "Rohit",
+      "contactNumber": 9876789876,
+      "address": "190 ryland street"
+}
+
+###
+// get customer info
+Get http://localhost:5000/api/customer/getCusInfo?id=1 HTTP/1.1
+content-type: application/json
+
+###
+// get all customers 
+Get http://localhost:5000/api/customer/getAllCustomers HTTP/1.1
+content-type: application/json
+
+###
+// update customer info
+put http://localhost:5000/api/customer/updateCusInfo HTTP/1.1
+content-type: application/json
+
+{
+      "id": 1,
+      "name": "Rohit",
+      "contactNumber": 9876789876,
+      "address": "190 ryland street"
+}
+
+###
+// delete customer info
+DELETE http://localhost:5000/api/customer/deleteCusInfo?id=4 HTTP/1.1
+content-type: application/json
+
+###
+// get customer id given customer email
+Get http://localhost:5000/api/customer/getCustIdGivenEmail?email=shivsmile@qaz.com HTTP/1.1
+content-type: application/json
+
+###
+// get all products
+Get http://localhost:5000/api/product/getAllProducts HTTP/1.1
+content-type: application/json
+
+###
+// get top 5 selling products
+Get http://localhost:5000/api/product/getTopFiveSellingProducts HTTP/1.1
+content-type: application/json
+
+###
+// get all employees
+Get http://localhost:5000/api/employee/getAllEmployees HTTP/1.1
+content-type: application/json
+
+###
+// get all employees from to
+Get http://localhost:5000/api/employee/getAllEmployeesFromTo?from=2021-11-02&&to=2021-11-30 HTTP/1.1
+content-type: application/json
+
+###
+// gettop 5 emp with highest sale last mon
+Get http://localhost:5000/api/employee/getEmployeesWithHighSaleLasMon HTTP/1.1
+content-type: application/json
+
+###
+
+// takes a month year string finds all emp sales in Mongo that month
+// if finds display else fetch data frpm mySql fill in Mongo and display (format of month_year feb 2021 --> "022021")
+Post http://localhost:5000/api/employee/getAllEmployeeSales HTTP/1.1
+content-type: application/json
+
+{
+      "year": "2021",
+      "month": "10"
+}
+
+
+
+###
+// delete employee given emp id 
+DELETE http://localhost:5000/api/employee/fireEmployee?id=7 HTTP/1.1
+content-type: application/json
+
+###
+// get all employees
+POST http://localhost:5000/api/employee/addTransaction HTTP/1.1
+content-type: application/json
+
+{
+    "cusId": 2,
+    "empId": 3,
+    "date": "2021-11-26",
+    "qty": 2,
+    "payDue": 0,
+    "discount": "10",
+    "products": [
+        {
+            "productId": 1,
+            "productName": "LogiTech HD Web Cam",
+            "productPrice": 100
+        },
+        {
+            "productId": 2,
+            "productName": "Fire HD 8 Tablet",
+            "productPrice": 119
+        }
+    ]
+}
+
+###
+// get all transactions of a customer given customer id
+Get http://localhost:5000/api/transaction/fetchAllTransactions?id=8 HTTP/1.1
+content-type: application/json
+
+
+
+###
+// get all transactions of a customer given customer id
+Get http://localhost:5000/api/transaction/cusLastTranDate?id=8 HTTP/1.1
+content-type: application/json
+
+###
+// get all transactions of a customer given customer id
+Get http://localhost:5000/api/transaction/fetchAllTransactionsView?id=8 HTTP/1.1
+content-type: application/json
+
+###
+// delete a perticular tran
+Post http://localhost:5000/api/transaction/deletTransaction HTTP/1.1
+content-type: application/json
+
+{
+      "empId": 1,
+      "cusId": 4,
+      "transactionId": 9,
+      "curDate": "2021-11-28",
+      "productId": 2
+}
+
+###
+// get all transactions with pay due
+Get http://localhost:5000/api/transaction/fetchAllTransactionsWithDue HTTP/1.1
+content-type: application/json
+
+###
+// fetch total income gen
+Get http://localhost:5000/api/transaction/fetchTotalIncomeGen HTTP/1.1
+content-type: application/json
+
+###
+// fetch total income gen form to
+Get http://localhost:5000/api/transaction/fetchTotalIncomeGenFromToTo?from=2021-11-02&&to=2021-11-30 HTTP/1.1
+content-type: application/json
+
+###
+// fetch total income gen last month
+Get http://localhost:5000/api/transaction/fetchTotalIncomeGenLasMonth HTTP/1.1
+content-type: application/json
+
+###
+// fetch total income gen by emp name
+Get http://localhost:5000/api/transaction/fetchTotalIncomeGenByAEmp?name=watson HTTP/1.1
+content-type: application/json
+
+###
+// given transaction id update payment due of transaction
+PUT http://localhost:5000/api/transaction/updateTransactionPayDueCol?id=3 HTTP/1.1
+content-type: application/json
+
+###
+// get all transactions from changes table
+get http://localhost:5000/api/transaction/fetchAllTransactionsChanged HTTP/1.1
+content-type: application/json
+
+###
+// get customer id given customer email
+Get http://localhost:5000/api/customer/getFiveCusHighPurFromTo?from=2021-11-02&&to=2021-11-30 HTTP/1.1
+content-type: application/json
+
+###
+// get customer membership status given customer id
+Get http://localhost:5000/api/customer/getMembershipStatus?id=9 HTTP/1.1
+content-type: application/json
+
+###
+// get customer id given customer email
+Get http://localhost:5000/api/customer/getFiveCusHighPurLasMon HTTP/1.1
+content-type: application/json

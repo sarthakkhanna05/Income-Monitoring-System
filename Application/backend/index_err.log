@@ -1,0 +1,24 @@
+node:events:368
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::5000
+    at Server.setupListenHandle [as _listen2] (node:net:1334:16)
+    at listenInCluster (node:net:1382:12)
+    at Server.listen (node:net:1469:7)
+    at Function.listen (C:\Users\Checkout\Desktop\Rohit_226\cmpe-226-team-project\backend\node_modules\express\lib\application.js:618:24)
+    at file:///C:/Users/Checkout/Desktop/Rohit_226/cmpe-226-team-project/backend/index.js:47:5
+    at ModuleJob.run (node:internal/modules/esm/module_job:185:25)
+    at async Promise.all (index 0)
+    at async ESMLoader.import (node:internal/modules/esm/loader:281:24)
+    at async loadESM (node:internal/process/esm_loader:88:5)
+    at async handleMainPromise (node:internal/modules/run_main:65:12)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1361:8)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::',
+  port: 5000
+}
